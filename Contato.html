@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!--LINGUAGEM DO SITE-->
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ICONE DO SITE-->
+    <link rel="shortcut icon" href="imagens atualizadas/1 - logo.png" type="image/ico" />
+
+    <!--LINK DO CSS-->
+    <link rel="stylesheet" href="./CSS/contato.css"/>
+
+    <!--TITULO DO SITE-->
+    <title>SUPER HERO</title>
+</head>
+<body>
+    <header>
+      <nav>
+        <!--LOGO DO SITE-->
+        <a href="./index.html" class="logo"><img src="imagens atualizadas/1 - logo.png" alt="Logo da empresa"/></a>
+
+      <!--MENU DO SITE-->
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./Catálogo.html">Catálogo</a></li>
+        <li><a href="./Contato.html">Contato</a></li>
+      </ul>
+      </nav>
+
+  <!--BANNER PRINCIPAL DO SITE-->  
+  <section>
+    <img 
+    src="imagens atualizadas/3 - Contato/1 - contatotitle.png"
+    class="imagemdotitulo"
+    alt="contato header"/>
+    </section>
+  </header> 
+
+    <main class="contato">
+    <h1>ENTRE EM CONTATO</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+       elit. Quisque enim eros, pretium maximus
+       pellentesque non, commodo quis risus.</p>
+
+    <section class="contact">
+      <div class="form-info-container">
+        <article class="form">
+        <form method="post" action="#">
+        <input 
+        type="text" 
+        name="Nome"
+        class="campo"
+        placeholder="Nome" 
+        aria-label="Nome contato">
+
+        <input 
+        type="email" 
+        name="Email"
+        class="campo"
+        placeholder="Email"
+        aria-label="E-mail contato">
+
+        <input 
+        type="tel" 
+        name="Telefone"
+        class="campo"
+        placeholder="Telefone" 
+        aria-label="Telefone contato">
+        </form>
+        </article>
+
+        <article class="info">
+          <textarea
+          name="mensagem"
+          class="infor"
+          placeholder="Como podemos ajudá-lo?" 
+          rows="5"></textarea>
+        </article>
+      </div>
+    </section>   
+
+    <button class="btn-enviar" title="Enviar">ENVIAR</button>
+    </main>
+    
+</body>
+</html>

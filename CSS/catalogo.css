@@ -1,0 +1,187 @@
+* {
+    font-family: sans-serif;
+    margin: 0; 
+   }
+  
+   header {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../imagens atualizadas/2 - Catálogo/1\ -\ captainmarvelheader.jpg");
+    width: 100%;
+    height: 900px;
+    background-size: cover;
+    background-position: center;
+  } 
+  
+
+  nav{
+    display: flex;
+    align-items: center;
+    margin-top: 1.1%;
+    margin-left: 1.4%;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 40px;
+    color: #fff;
+    list-style: none;
+  }
+  
+  nav ul li {
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 10%;
+  }
+  
+  nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+  }
+  
+  nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: #fc3836;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  nav ul li a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  nav img {
+    width: 100px;
+  }
+  
+  header section {
+    display: flex;
+    justify-content: start;
+    flex-grow: 1;
+    align-items: center;
+  }
+  
+  .imagemdotitulo {
+    width: 550px;
+    margin-left: 22%;
+    margin-top: 27%;
+  }
+
+  main {
+    margin-top: -10px; /* Isso move a seção principal para cima em 10 pixels. Funciona como se você estivesse puxando a seção um pouco para cima.*/
+    margin-bottom: -10px; /*Isso move a seção principal para baixo em 10 pixels. Funciona como se você estivesse empurrando a seção um pouco para baixo.*/
+
+    /*Essas regras ajustam a posição vertical da seção principal do seu conteúdo.*/
+  }
+
+  .catalogo {
+    text-align: center; /*Isso centraliza horizontalmente o texto dentro desses elementos. Se houver texto dentro de um elemento com a classe "catalogo", o texto estará centralizado.*/
+    padding: 20px; /* Responsavel por adiciona um espaçamento interno em todas as direções nos elementos. Isso cria um espaço em volta do conteúdo dentro do elemento.*/
+
+    /*Essas regras controlam o alinhamento do texto e o espaçamento interno dos elementos com a classe "catalogo". */
+  }
+
+  .catalogo h1 {
+    font-size: 2.4em; /*Isso define o tamanho da fonte do texto dos títulos como 2.4 vezes. Ou seja, os títulos ficarão um pouco maiores.*/
+    margin-top: 25px; /* Isso move a seção principal para cima em 25 pixels. Funciona como se você estivesse puxando a seção um pouco para cima.*/
+    margin-bottom: 10px; /*Isso adiciona um espaço de 10 pixels abaixo dos títulos. Cria um espaço entre o título e o conteúdo que vem logo abaixo dele.*/
+
+    /*Essas regras ajustam a aparência e o espaçamento dos títulos dentro dos elementos com a classe "catalogo". */
+  }
+
+  .catalogo h1 {
+    position: relative; /*Isso define um contexto de posicionamento para os elementos filhos que tenham position: absolute. É como um "campo de jogo" para posicioná-los de maneira precisa dentro de .catalogo-titulo.*/
+    display: inline-block; /*Isso faz com que os itens da lista fiquem na mesma linha, como palavras em um texto, em vez de empilhados verticalmente.*/
+}
+
+.catalogo h1::after {
+    content: "";
+    position: absolute;
+    bottom: -8px; /* Distância entre o texto e a linha */
+    left: 15%; /* Isso define onde o pedaço de texto vai ficar da esquerda para a direita. Ele vai começar a 15% da largura da página a partir da borda esquerda.*/
+    width: 70%; /* Largura da linha */
+    height: 2px; /* Altura da linha */
+    background-color: rgb(255, 0, 0); /* Cor da linha */
+}
+
+.grupo-catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.grupo-catalogo article {
+    width: calc(33.33% - 20px);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.grupo-catalogo article h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+   
+}
+
+.grupo-catalogo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.grupo-catalogo p {
+    margin-top: 10px;
+    white-space: pre-line; /*Mantém as quebras de linha do HTML, mostrando-as corretamente.*/
+    
+}
+
+.grupo-catalogo button {
+    background-color: rgb(252, 56, 54);
+    font-size: 1.0em; /*Isso define o tamanho da fonte dos links como 1.4 vezes o tamanho padrão da fonte. Aumenta o tamanho do texto dos links.*/
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px; /*Isso define um arredondamento de borda de 18 pixels para os links, criando uma aparência mais suave e arredondada.*/
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+      background-position: 30% center;
+    }
+  
+    nav {
+      flex-direction: column;
+      margin-left: 0;
+    }
+  
+    ul {
+      padding: 0;
+      padding-top: 20px;
+    }
+  
+    nav ul li {
+      margin-left: 0;
+    }
+  
+    .imagemdotitulo {
+      width: 60%;
+      max-width: 100%;
+      margin-top: 45%;
+      margin-left: 10%;
+    }
+
+    .grupo-catalogo article {
+        width: 100%; /* Faz com que cada artigo ocupe 100% da largura da tela */
+        margin-bottom: 30px; /* Reduz o espaço entre os artigos */
+      }
+}
